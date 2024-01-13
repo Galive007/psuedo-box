@@ -1,0 +1,39 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+h1{
+    text-align: center;
+}
+form{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+form>input{
+    padding: 10px 10px;
+    width: 50%;
+    display: block;
+    margin: 10px 0;
+}
+input:focus{
+    outline: 0;
+    border: 5px solid blue;
+    color: aliceblue;
+    background-color: blueviolet;
+}
+
+ul>li{
+    font-size: 20px;
+    margin-top: 10px;
+    list-style: none;
+}
+li>a{
+    text-decoration: none;
+}
+li:nth-child(2n+1){
+    color: blue;
+}
+/* a:visited{
+    color: aquamarine;
+} */

@@ -4,8 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Position</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        ol>li{
+            text-align: center;
+            margin-top: 15px;
+            list-style: none;
+        }
+        .container-div-St , .container-div-A , .container-div-R , .container-div-F , .container-div-S{
+            position: relative;
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 25px;
+            padding: 20px;
+            border: 2px solid red;
+        }
+        .box{
+            width: 50%;
+            margin: 0 auto;
+            height: 250px;
+            border: 1px dotted blue;
+            padding: 20px;
+        }
+        /* relative position */
+        .container-div-R>.box{
+            position: relative;
+        }
+        .container-div-R>.ring{
+            top: -258px;
+            left: 10px;
+            z-index: 3;
+        }
+        .container-div-R>.boy{
+            z-index: 5;
+        }
+        .container-div-R>.water{
+            top: -534px;
+            left: 10px;
+            z-index: 1;
+        }
+        /* absolude position */
+        .container-div-A>.ring{
+            position: absolute;
+            top: 61px;
+            left: 217px;
+        }
+        
+        /* sticky position */
+       
+        .container-div-S>.boy{
+            position: sticky;
+            top: 74px;
+            z-index: 3;
+        }
+        .container-div-S>.ring{
+            position: sticky;
+            top: 105px;
+            z-index: 2;
+        }
+        .container-div-S>.water{
+            position: sticky;
+            top: 120px;
+            z-index: 1;
+        }
+        .dummy{
+            width: 50%;
+            margin: 0 auto;
+            height: 200px;
+            border: 2px double green;
+        }
+        /* fixed position */
+        .container-div-F>.boy{
+            position: fixed;
+            top: 50%;
+            left: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>CSS Position</h1>
+    <ol>
+        <li><b>Static : </b>
+            <div class="container-div-St">
+                <div class="box boy">
+                    <img src="images/boy.svg" alt="">
+                </div>
+                <div class="box ring">
+                    <img src="images/ring.svg" alt="">
+                </div>
+                <div class="box water">
+                    <img src="images/water.svg" alt="">
+                </div>
+            </div>
+        </li>
+        <li><b>Relative :</b><small> current position relative e koto tuku change hobe and will not leave current spot</small>
+            <div class="container-div-R">
+                <div class="box boy">
+                    <img src="images/boy.svg" alt="">
+                </div>
+                <div class="box ring">
+                    <img src="images/ring.svg" alt="">
+                </div>
+                <div class="box water">
+                    <img src="images/water.svg" alt="">
+                </div>
+            </div>
+        </li>
+        <li><b>Absolute :</b><small> will lose its own positions and will move base on the root</small>
+            <div class="container-div-A">
+                <div class="box boy">
+                    <img src="images/boy.svg" alt="">
+                </div>
+                <div class="box ring">
+                    <img src="images/ring.svg" alt="">
+                </div>
+                <div class="box water">
+                    <img src="images/water.svg" alt="">
+                </div>
+            </div>
+        </li>
+        
+        <li><b>Sticky :</b>
+            <div class="container-div-S">
+                <div class="box boy">
+                    <img src="images/boy.svg" alt="">
+                </div>
+                <div class="box ring">
+                    <img src="images/ring.svg" alt="">
+                </div>
+                <div class="box water">
+                    <img src="images/water.svg" alt="">
+                </div>
+                <div class="dummy"></div>
+                <div class="dummy"></div>
+                <div class="dummy"></div>
+                <div class="dummy"></div>
+                <div class="dummy"></div>
+            </div>
+            
+        </li>
+        <li><b>Fixed :</b>
+            <div class="container-div-F">
+                <div class="box boy">
+                    <h4>Im fixed for the fix position on your screen</h4>
+                    <img src="images/boy.svg" alt="">
+                </div>
+                <div class="box ring">
+                    <img src="images/ring.svg" alt="">
+                </div>
+                <div class="box water">
+                    <img src="images/water.svg" alt="">
+                </div>
+                <div class="dummy"></div>
+                <div class="dummy"></div>
+                <div class="dummy"></div>
+                <div class="dummy"></div>
+                <div class="dummy"></div>
+            </div>
+        </li>
+    </ol>
 </body>
 </html>
